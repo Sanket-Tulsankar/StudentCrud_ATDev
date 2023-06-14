@@ -8,9 +8,15 @@ public class StudentValidations {
 	public static void validateStudent(StudentInfo studentInfo) throws ValidationException {
 		validateName(studentInfo.getFirstName(), studentInfo.getLastName());
 		validateAge(studentInfo.getAge());
+		// validateMarks(subjects.getMarks());
 	}
 
-	private static void validateAge(int age) throws ValidationException {
+	/*
+	 * private static void validateMarks(int marks) throws ValidationException {
+	 * if(marks<35) throw new ValidationException("Failed in the subject !!!!"); }
+	 */
+
+	public static void validateAge(int age) throws ValidationException {
 		if (age < 16)
 			throw new ValidationException("Age is less than the expected !!!!");
 	}

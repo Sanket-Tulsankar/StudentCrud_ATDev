@@ -1,12 +1,18 @@
 package com.student.StudentCrudOperations.exceptionHandler;
 
-public class NotFoundException extends Exception{
+import lombok.Getter;
+import lombok.Setter;
 
-	public String msg;
+@SuppressWarnings("serial")
+@Getter
+@Setter
+public class NotFoundException extends Exception {
 
-	public NotFoundException(String msg) {
+	private String err_msg;
+
+	public NotFoundException(String err_msg) {
 		super();
-		this.msg = msg;
+		this.err_msg = err_msg;
 	}
 	
 	

@@ -1,12 +1,18 @@
 package com.student.StudentCrudOperations.exceptionHandler;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@SuppressWarnings("serial")
+@Getter
+@Setter
 public class ValidationException extends Exception{
 
-	String error_msg;
+	private String msg;
 
-	public ValidationException(String error_msg) {
+	public ValidationException(String msg) {
 		super();
-		this.error_msg = error_msg;
+		this.msg = msg;
 	}
 	
 	
